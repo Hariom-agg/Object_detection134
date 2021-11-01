@@ -44,12 +44,14 @@ function draw()
  
   if(ses != "")
   {
-     for( i= 0; i < object.length; i++)
-     {
-        r = random(255);
+    r = random(255);
         g = random(255);
         b = random(255);
       objectDetector.detect(video , gotResults);
+   
+     for( i= 0; i < object.length; i++)
+     {
+       
          document.getElementById("status").innerHTML = "Status : Object Detected";
          document.getElementById("Number_objects").innerHTML = "Number of objects Objected:"+ object.length;
          fill(r,g,b);
